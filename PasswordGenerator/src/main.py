@@ -30,9 +30,9 @@ def memorable_password_generator(length, separator = "_", capitalization = False
         vocabulary = ['apple', 'banana', 'cherry', 'dates'] 
     
     if capitalization:
-        password_words = [word.capitalize() for word in password_words]
+        password_words = [word.capitalize() for word in vocabulary]
 
-    return separator.join(random.choice(vocabulary) for _ in range(length))
+    return separator.join(random.choice(password_words) for _ in range(length))
 
 
 def main():
